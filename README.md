@@ -116,7 +116,7 @@
         <attr name="itemText" format="string"/>
         <!--文字大小-->
         <attr name="itemTextSize" format="dimension"/>
-	<!--图标大小-->
+		<!--图标大小-->
         <attr name="itemIconSize" format="dimension"/>
         <!--默认状态下的文字颜色-->
         <attr name="textColorNormal" format="color"/>
