@@ -10,105 +10,105 @@
 
 在xml文件中，配置BottomBarLayout，包裹子条目BottomBarItem
     
-    <?xml version="1.0" encoding="utf-8"?>
+	<?xml version="1.0" encoding="utf-8"?>
 	<LinearLayout
 	    xmlns:android="http://schemas.android.com/apk/res/android"
 	    xmlns:app="http://schemas.android.com/apk/res-auto"
 	    android:layout_width="match_parent"
 	    android:layout_height="match_parent"
 	    android:orientation="vertical"
-    >
+	    >
 
-    <android.support.v4.view.ViewPager
-        android:id="@+id/vp_content"
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="1"
-        ></android.support.v4.view.ViewPager>
+	    <android.support.v4.view.ViewPager
+		android:id="@+id/vp_content"
+		android:layout_width="match_parent"
+		android:layout_height="0dp"
+		android:layout_weight="1"
+		/>
 
-    <com.bottom.BottomBarLayout
-        android:id="@+id/bbl"
-        android:layout_width="match_parent"
-        android:layout_height="45dp"
-        android:layout_gravity="center"
-        android:background="@color/tab_gb"
-        android:gravity="center"
-        android:orientation="horizontal"
-        >
+	    <com.bottom.BottomBarLayout
+		android:id="@+id/bbl"
+		android:layout_width="match_parent"
+		android:layout_height="45dp"
+		android:layout_gravity="center"
+		android:background="@color/tab_gb"
+		android:gravity="center"
+		android:orientation="horizontal"
+		>
 
-        <com.bottom.BottomBarItem
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            app:iconNormal="@mipmap/tab_home_normal"
-            app:iconSelected="@mipmap/tab_home_selected"
-            app:itemIconSize="13dip"
-            app:itemMarginTop="-5dp"
-            app:itemText="首页"
-            app:itemTextSize="11sp"
-            app:openTouchBg="true"
-            app:textColorNormal="@color/tab_normal_color"
-            app:textColorSelected="@color/tab_selected_color"
-            app:touchDrawable="@drawable/selector_bg"
-            />
+		<com.bottom.BottomBarItem
+		    android:layout_width="0dp"
+		    android:layout_height="match_parent"
+		    android:layout_weight="1"
+		    app:iconNormal="@mipmap/tab_home_normal"
+		    app:iconSelected="@mipmap/tab_home_selected"
+		    app:itemIconSize="13dip"
+		    app:itemMarginTop="-5dp"
+		    app:itemText="首页"
+		    app:itemTextSize="11sp"
+		    app:openTouchBg="true"
+		    app:textColorNormal="@color/tab_normal_color"
+		    app:textColorSelected="@color/tab_selected_color"
+		    app:touchDrawable="@drawable/selector_bg"
+		    />
 
-        <com.bottom.BottomBarItem
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            app:iconNormal="@mipmap/tab_video_normal"
-            app:iconSelected="@mipmap/tab_video_selected"
-            app:itemIconSize="13dip"
-            app:itemMarginTop="-5dp"
-            app:itemText="视频"
-            app:itemTextSize="11sp"
-            app:openTouchBg="true"
-            app:textColorNormal="@color/tab_normal_color"
-            app:textColorSelected="@color/tab_selected_color"
-            app:touchDrawable="@drawable/selector_bg"
-            />
+		<com.bottom.BottomBarItem
+		    android:layout_width="0dp"
+		    android:layout_height="match_parent"
+		    android:layout_weight="1"
+		    app:iconNormal="@mipmap/tab_video_normal"
+		    app:iconSelected="@mipmap/tab_video_selected"
+		    app:itemIconSize="13dip"
+		    app:itemMarginTop="-5dp"
+		    app:itemText="视频"
+		    app:itemTextSize="11sp"
+		    app:openTouchBg="true"
+		    app:textColorNormal="@color/tab_normal_color"
+		    app:textColorSelected="@color/tab_selected_color"
+		    app:touchDrawable="@drawable/selector_bg"
+		    />
 
 
-        <com.bottom.BottomBarItem
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            app:iconNormal="@mipmap/tab_micro_normal"
-            app:iconSelected="@mipmap/tab_micro_selected"
-            app:itemIconSize="13dip"
-            app:itemMarginTop="-5dp"
-            app:itemText="微头条"
-            app:itemTextSize="11sp"
-            app:openTouchBg="true"
-            app:textColorNormal="@color/tab_normal_color"
-            app:textColorSelected="@color/tab_selected_color"
-            app:touchDrawable="@drawable/selector_bg"
-            />
+		<com.bottom.BottomBarItem
+		    android:layout_width="0dp"
+		    android:layout_height="match_parent"
+		    android:layout_weight="1"
+		    app:iconNormal="@mipmap/tab_micro_normal"
+		    app:iconSelected="@mipmap/tab_micro_selected"
+		    app:itemIconSize="13dip"
+		    app:itemMarginTop="-5dp"
+		    app:itemText="微头条"
+		    app:itemTextSize="11sp"
+		    app:openTouchBg="true"
+		    app:textColorNormal="@color/tab_normal_color"
+		    app:textColorSelected="@color/tab_selected_color"
+		    app:touchDrawable="@drawable/selector_bg"
+		    />
 
-        <com.bottom.BottomBarItem
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            app:iconNormal="@mipmap/tab_me_normal"
-            app:iconSelected="@mipmap/tab_me_selected"
-            app:itemIconSize="13dip"
-            app:itemMarginTop="-5dp"
-            app:itemText="我的"
-            app:itemTextSize="11sp"
-            app:openTouchBg="true"
-            app:textColorNormal="@color/tab_normal_color"
-            app:textColorSelected="@color/tab_selected_color"
-            app:touchDrawable="@drawable/selector_bg"
-            />
+		<com.bottom.BottomBarItem
+		    android:layout_width="0dp"
+		    android:layout_height="match_parent"
+		    android:layout_weight="1"
+		    app:iconNormal="@mipmap/tab_me_normal"
+		    app:iconSelected="@mipmap/tab_me_selected"
+		    app:itemIconSize="13dip"
+		    app:itemMarginTop="-5dp"
+		    app:itemText="我的"
+		    app:itemTextSize="11sp"
+		    app:openTouchBg="true"
+		    app:textColorNormal="@color/tab_normal_color"
+		    app:textColorSelected="@color/tab_selected_color"
+		    app:touchDrawable="@drawable/selector_bg"
+		    />
 
-    </com.bottom.BottomBarLayout>
+	    </com.bottom.BottomBarLayout>
 
 	</LinearLayout>
 
 
 #### BottomBarItem属性介绍
 
-        <!--默认状态下的图标-->
+	<!--默认状态下的图标-->
         <attr name="iconNormal" format="reference"/>
         <!--选中状态下的图标-->
         <attr name="iconSelected" format="reference"/>
@@ -116,7 +116,7 @@
         <attr name="itemText" format="string"/>
         <!--文字大小-->
         <attr name="itemTextSize" format="dimension"/>
-		<!--图标大小-->
+        <!--图标大小-->
         <attr name="itemIconSize" format="dimension"/>
         <!--默认状态下的文字颜色-->
         <attr name="textColorNormal" format="color"/>
@@ -124,6 +124,10 @@
         <attr name="textColorSelected" format="color"/>
         <!--文字和图标的顶部距离-->
         <attr name="itemMarginTop" format="dimension"/>
+        <!--是否开启触摸背景效果-->
+        <attr name="openTouchBg" format="boolean"/>
+        <!--设置触摸背景-->
+        <attr name="touchDrawable" format="reference"/>
 
 #### java文件中设置
 
