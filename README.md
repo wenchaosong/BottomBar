@@ -26,70 +26,82 @@
         android:layout_weight="1"
         ></android.support.v4.view.ViewPager>
 
-    <com.chaychan.library.BottomBarLayout
+    <com.bottom.BottomBarLayout
         android:id="@+id/bbl"
         android:layout_width="match_parent"
         android:layout_height="45dp"
-        android:orientation="horizontal"
-        android:gravity="center"
         android:layout_gravity="center"
         android:background="@color/tab_gb"
+        android:gravity="center"
+        android:orientation="horizontal"
         >
 
-        <com.chaychan.library.BottomBarItem
+        <com.bottom.BottomBarItem
             android:layout_width="0dp"
-            android:layout_weight="1"
             android:layout_height="match_parent"
+            android:layout_weight="1"
             app:iconNormal="@mipmap/tab_home_normal"
             app:iconSelected="@mipmap/tab_home_selected"
+            app:itemIconSize="13dip"
+            app:itemMarginTop="-5dp"
             app:itemText="首页"
+            app:itemTextSize="11sp"
+            app:openTouchBg="true"
             app:textColorNormal="@color/tab_normal_color"
             app:textColorSelected="@color/tab_selected_color"
-            app:itemTextSize="8sp"
-            app:itemMarginTop="-5dp"
+            app:touchDrawable="@drawable/selector_bg"
             />
 
-        <com.chaychan.library.BottomBarItem
+        <com.bottom.BottomBarItem
             android:layout_width="0dp"
-            android:layout_weight="1"
             android:layout_height="match_parent"
+            android:layout_weight="1"
             app:iconNormal="@mipmap/tab_video_normal"
             app:iconSelected="@mipmap/tab_video_selected"
+            app:itemIconSize="13dip"
+            app:itemMarginTop="-5dp"
             app:itemText="视频"
+            app:itemTextSize="11sp"
+            app:openTouchBg="true"
             app:textColorNormal="@color/tab_normal_color"
             app:textColorSelected="@color/tab_selected_color"
-            app:itemTextSize="8sp"
-            app:itemMarginTop="-5dp"
+            app:touchDrawable="@drawable/selector_bg"
             />
 
 
-        <com.chaychan.library.BottomBarItem
+        <com.bottom.BottomBarItem
             android:layout_width="0dp"
-            android:layout_weight="1"
             android:layout_height="match_parent"
+            android:layout_weight="1"
             app:iconNormal="@mipmap/tab_micro_normal"
             app:iconSelected="@mipmap/tab_micro_selected"
+            app:itemIconSize="13dip"
+            app:itemMarginTop="-5dp"
             app:itemText="微头条"
+            app:itemTextSize="11sp"
+            app:openTouchBg="true"
             app:textColorNormal="@color/tab_normal_color"
             app:textColorSelected="@color/tab_selected_color"
-            app:itemTextSize="8sp"
-            app:itemMarginTop="-5dp"
+            app:touchDrawable="@drawable/selector_bg"
             />
 
-        <com.chaychan.library.BottomBarItem
+        <com.bottom.BottomBarItem
             android:layout_width="0dp"
-            android:layout_weight="1"
             android:layout_height="match_parent"
+            android:layout_weight="1"
             app:iconNormal="@mipmap/tab_me_normal"
             app:iconSelected="@mipmap/tab_me_selected"
+            app:itemIconSize="13dip"
+            app:itemMarginTop="-5dp"
             app:itemText="我的"
+            app:itemTextSize="11sp"
+            app:openTouchBg="true"
             app:textColorNormal="@color/tab_normal_color"
             app:textColorSelected="@color/tab_selected_color"
-            app:itemTextSize="8sp"
-            app:itemMarginTop="-5dp"
+            app:touchDrawable="@drawable/selector_bg"
             />
 
-      </com.chaychan.library.BottomBarLayout>
+    </com.bottom.BottomBarLayout>
 
 	</LinearLayout>
 
