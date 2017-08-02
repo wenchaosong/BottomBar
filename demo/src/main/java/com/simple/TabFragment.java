@@ -1,4 +1,4 @@
-package com.chaychan.bottombarlayout;
+package com.simple;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
