@@ -3,7 +3,6 @@ package com.bottom;
 import android.content.Context;
 import android.content.res.TypedArray;
 import android.graphics.drawable.Drawable;
-import android.support.annotation.Nullable;
 import android.util.AttributeSet;
 import android.util.TypedValue;
 import android.view.Gravity;
@@ -72,7 +71,7 @@ public class BottomBarItem extends LinearLayout {
         mTouchDrawable = ta.getDrawable(R.styleable.BottomBarItem_touchDrawable);
 
         mItemPadding = ta.getDimensionPixelSize(R.styleable.BottomBarItem_itemPadding, 0);
-        mNotifyIcon = ta.getResourceId(R.styleable.BottomBarItem_notifyIcon, -1);
+        mNotifyIcon = ta.getResourceId(R.styleable.BottomBarItem_notifyIcon, R.drawable.bottom_bar_image_red_point);
         mNotifySize = ta.getDimensionPixelSize(R.styleable.BottomBarItem_notifySize, UIUtils.dip2Px(mContext, 10));
         mNotifyMarTop = ta.getDimensionPixelSize(R.styleable.BottomBarItem_notifyMarginTop, 0);
         mNotifyMarLeft = ta.getDimensionPixelSize(R.styleable.BottomBarItem_notifyMarginLeft, UIUtils.dip2Px(mContext, 10));

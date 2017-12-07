@@ -60,7 +60,6 @@
             app:itemMarginTop="0dp"
             app:itemText="微头条"
             app:itemTextSize="10sp"
-            app:notifyIcon="@drawable/image_red_point"
             app:notifyMarginTop="5dp"
             app:notifySize="8dp"
             app:openTouchBg="true"
