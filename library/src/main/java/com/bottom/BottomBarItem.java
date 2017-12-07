@@ -3,9 +3,12 @@ package com.bottom;
 import android.content.Context;
 import android.content.res.TypedArray;
 import android.graphics.drawable.Drawable;
+import android.support.annotation.Nullable;
 import android.util.AttributeSet;
+import android.util.TypedValue;
 import android.view.Gravity;
 import android.view.View;
+import android.widget.FrameLayout;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
@@ -17,15 +20,26 @@ public class BottomBarItem extends LinearLayout {
     private int mIconSelectedResourceId;//选中状态图标的资源id
     private String mText;//文本
     private int mTextSize = 12;//文字大小 默认为12sp
-    private int mIconSize = 13;//图标大小 默认为12dip
+    private int mIconSize;//图标大小 默认为12dip
     private int mTextColorNormal = 0xFF999999;    //描述文本的默认显示颜色
     private int mTextColorSelected = 0xFF46C01B;  //述文本的默认选中显示颜色
     private int mMarginTop = 0;//文字和图标的距离,默认0dp
     private boolean mOpenTouchBg = false;// 是否开启触摸背景，默认关闭
     private Drawable mTouchDrawable;//触摸时的背景
+    private int mItemPadding;//BottomBarItem的padding
+    private int mNotifyIcon;//红点图标
+    private int mNotifySize;//红点的大小
+    private int mNotifyMarTop;//红点的margin
+    private int mNotifyMarLeft;//红点的margin
 
-    private TextView mTextView;
     private ImageView mImageView;
+    private TextView mTvUnread;
+    private ImageView mTvNotify;
+    private TextView mTvMsg;
+    private TextView mTextView;
+
+    private int mUnreadTextSize = 10; //未读数默认字体大小10sp
+    private int mMsgTextSize = 6; //消息默认字体大小6sp
 
     public BottomBarItem(Context context) {
         this(context, null);
@@ -47,7 +61,7 @@ public class BottomBarItem extends LinearLayout {
 
         mText = ta.getString(R.styleable.BottomBarItem_itemText);
         mTextSize = ta.getDimensionPixelSize(R.styleable.BottomBarItem_itemTextSize, UIUtils.sp2px(mContext, mTextSize));
-        mIconSize = ta.getDimensionPixelSize(R.styleable.BottomBarItem_itemIconSize, UIUtils.sp2px(mContext, mIconSize));
+        mIconSize = ta.getDimensionPixelSize(R.styleable.BottomBarItem_iconSize, UIUtils.dip2Px(mContext, 13));
 
         mTextColorNormal = ta.getColor(R.styleable.BottomBarItem_textColorNormal, mTextColorNormal);
         mTextColorSelected = ta.getColor(R.styleable.BottomBarItem_textColorSelected, mTextColorSelected);
@@ -56,6 +70,15 @@ public class BottomBarItem extends LinearLayout {
 
         mOpenTouchBg = ta.getBoolean(R.styleable.BottomBarItem_openTouchBg, mOpenTouchBg);
         mTouchDrawable = ta.getDrawable(R.styleable.BottomBarItem_touchDrawable);
+
+        mItemPadding = ta.getDimensionPixelSize(R.styleable.BottomBarItem_itemPadding, 0);
+        mNotifyIcon = ta.getResourceId(R.styleable.BottomBarItem_notifyIcon, -1);
+        mNotifySize = ta.getDimensionPixelSize(R.styleable.BottomBarItem_notifySize, UIUtils.dip2Px(mContext, 10));
+        mNotifyMarTop = ta.getDimensionPixelSize(R.styleable.BottomBarItem_notifyMarginTop, 0);
+        mNotifyMarLeft = ta.getDimensionPixelSize(R.styleable.BottomBarItem_notifyMarginLeft, UIUtils.dip2Px(mContext, 10));
+
+        mUnreadTextSize = ta.getDimensionPixelSize(R.styleable.BottomBarItem_unreadTextSize, UIUtils.sp2px(mContext, mUnreadTextSize));
+        mMsgTextSize = ta.getDimensionPixelSize(R.styleable.BottomBarItem_msgTextSize, UIUtils.sp2px(mContext, mMsgTextSize));
 
         ta.recycle();
 
@@ -86,20 +109,41 @@ public class BottomBarItem extends LinearLayout {
         setGravity(Gravity.CENTER);
 
         View view = View.inflate(mContext, R.layout.item_bottom_bar, null);
+        if (mItemPadding != 0) {
+            //如果有设置item的padding
+            view.setPadding(mItemPadding, mItemPadding, mItemPadding, mItemPadding);
+        }
         mImageView = (ImageView) view.findViewById(R.id.iv_icon);
+        mTvUnread = (TextView) view.findViewById(R.id.tv_unred_num);
+        mTvMsg = (TextView) view.findViewById(R.id.tv_msg);
+        mTvNotify = (ImageView) view.findViewById(R.id.tv_point);
+        FrameLayout.LayoutParams notifyParams = (FrameLayout.LayoutParams) mTvNotify.getLayoutParams();
+        notifyParams.width = mNotifySize;
+        notifyParams.height = mNotifySize;
+        notifyParams.topMargin = mNotifyMarTop;
+        notifyParams.leftMargin = mNotifyMarLeft;
+        mTvNotify.setLayoutParams(notifyParams);
+        mTvNotify.setImageResource(mNotifyIcon);
         mTextView = (TextView) view.findViewById(R.id.tv_text);
 
         mImageView.setImageResource(mIconNormalResourceId);
-        mImageView.setScaleType(ImageView.ScaleType.FIT_XY);
-        mImageView.setLayoutParams(new LinearLayout.LayoutParams(UIUtils.dip2Px(mContext, mIconSize), UIUtils.dip2Px(mContext, mIconSize)));
 
-        mTextView.getPaint().setTextSize(mTextSize);
-        mTextView.setText(mText);
-        mTextView.setTextColor(mTextColorNormal);
+        //如果有设置图标的宽度和高度，则设置ImageView的宽高
+        FrameLayout.LayoutParams imageLayoutParams = (FrameLayout.LayoutParams) mImageView.getLayoutParams();
+        imageLayoutParams.width = mIconSize;
+        imageLayoutParams.height = mIconSize;
+        mImageView.setLayoutParams(imageLayoutParams);
 
-        LayoutParams layoutParams = (LayoutParams) mTextView.getLayoutParams();
-        layoutParams.topMargin = mMarginTop;
-        mTextView.setLayoutParams(layoutParams);
+        mTextView.setTextSize(TypedValue.COMPLEX_UNIT_PX, mTextSize);//设置底部文字字体大小
+        mTvUnread.setTextSize(TypedValue.COMPLEX_UNIT_PX, mUnreadTextSize);//设置未读数的字体大小
+        mTvMsg.setTextSize(TypedValue.COMPLEX_UNIT_PX, mMsgTextSize);//设置提示文字的字体大小
+
+        mTextView.setTextColor(mTextColorNormal);//设置底部文字字体颜色
+        mTextView.setText(mText);//设置标签文字
+
+        LayoutParams textLayoutParams = (LayoutParams) mTextView.getLayoutParams();
+        textLayoutParams.topMargin = mMarginTop;
+        mTextView.setLayoutParams(textLayoutParams);
 
         if (mOpenTouchBg) {
             //如果有开启触摸背景
@@ -128,5 +172,56 @@ public class BottomBarItem extends LinearLayout {
     public void setStatus(boolean isSelected) {
         mImageView.setImageResource(isSelected ? mIconSelectedResourceId : mIconNormalResourceId);
         mTextView.setTextColor(isSelected ? mTextColorSelected : mTextColorNormal);
+    }
+
+    private void setTvVisiable(TextView tv) {
+        //都设置为不可见
+        mTvUnread.setVisibility(GONE);
+        mTvMsg.setVisibility(GONE);
+        mTvNotify.setVisibility(GONE);
+
+        tv.setVisibility(VISIBLE);//设置为可见
+    }
+
+    private void setTvVisiable(ImageView tv) {
+        //都设置为不可见
+        mTvUnread.setVisibility(GONE);
+        mTvMsg.setVisibility(GONE);
+        mTvNotify.setVisibility(GONE);
+
+        tv.setVisibility(VISIBLE);//设置为可见
+    }
+
+    /**
+     * 设置未读数
+     *
+     * @param unreadNum 小于等于0则隐藏，大于0小于99则显示对应数字，超过99显示99+
+     */
+    public void setUnreadNum(int unreadNum) {
+        setTvVisiable(mTvUnread);
+        if (unreadNum <= 0) {
+            mTvUnread.setVisibility(GONE);
+        } else if (unreadNum <= 99) {
+            mTvUnread.setText(String.valueOf(unreadNum));
+        } else {
+            mTvUnread.setText("99+");
+        }
+    }
+
+    public void setMsg(String msg) {
+        setTvVisiable(mTvMsg);
+        mTvMsg.setText(msg);
+    }
+
+    public void hideMsg() {
+        mTvMsg.setVisibility(GONE);
+    }
+
+    public void showNotify() {
+        setTvVisiable(mTvNotify);
+    }
+
+    public void hideNotify() {
+        mTvNotify.setVisibility(GONE);
     }
 }

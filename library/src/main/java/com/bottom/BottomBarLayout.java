@@ -104,16 +104,15 @@ public class BottomBarLayout extends LinearLayout implements ViewPager.OnPageCha
             //回调点击的位置
             if (onItemSelectedListener != null) {
                 onItemSelectedListener.onItemSelected(getBottomItem(currentIndex), currentIndex);
-            } else {
-
-                //点击前先重置所有按钮的状态
-                resetState();
-                mItemViews.get(currentIndex).setStatus(true);//设置为选中状态
-                //不能使用平滑滚动，否者颜色改变会乱
-                mViewPager.setCurrentItem(currentIndex, mSmoothScroll);
-                //点击是保存当前按钮索引
-                mCurrentItem = currentIndex;
             }
+
+            //点击前先重置所有按钮的状态
+            resetState();
+            mItemViews.get(currentIndex).setStatus(true);//设置为选中状态
+            //不能使用平滑滚动，否者颜色改变会乱
+            mViewPager.setCurrentItem(currentIndex, mSmoothScroll);
+            //点击是保存当前按钮索引
+            mCurrentItem = currentIndex;
         }
     }
 
@@ -129,6 +128,53 @@ public class BottomBarLayout extends LinearLayout implements ViewPager.OnPageCha
     public void setCurrentItem(int currentItem) {
         mCurrentItem = currentItem;
         mViewPager.setCurrentItem(mCurrentItem, mSmoothScroll);
+    }
+
+    /**
+     * 设置未读数
+     *
+     * @param position  底部标签的下标
+     * @param unreadNum 未读数
+     */
+    public void setUnread(int position, int unreadNum) {
+        mItemViews.get(position).setUnreadNum(unreadNum);
+    }
+
+    /**
+     * 设置提示消息
+     *
+     * @param position 底部标签的下标
+     * @param msg      未读数
+     */
+    public void setMsg(int position, String msg) {
+        mItemViews.get(position).setMsg(msg);
+    }
+
+    /**
+     * 隐藏提示消息
+     *
+     * @param position 底部标签的下标
+     */
+    public void hideMsg(int position) {
+        mItemViews.get(position).hideMsg();
+    }
+
+    /**
+     * 显示提示的小红点
+     *
+     * @param position 底部标签的下标
+     */
+    public void showNotify(int position) {
+        mItemViews.get(position).showNotify();
+    }
+
+    /**
+     * 隐藏提示的小红点
+     *
+     * @param position 底部标签的下标
+     */
+    public void hideNotify(int position) {
+        mItemViews.get(position).hideNotify();
     }
 
     public int getCurrentItem() {
