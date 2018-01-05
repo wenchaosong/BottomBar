@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical">
@@ -8,80 +7,14 @@
     <android.support.v4.view.ViewPager
         android:id="@+id/vp_content"
         android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="1" />
+        android:layout_height="match_parent"
+        android:layout_above="@+id/tab" />
 
-    <com.bottom.BottomBarLayout
-        android:id="@+id/bbl"
+    <com.bottom.PageNavigationView
+        android:id="@+id/tab"
         android:layout_width="match_parent"
-        android:layout_height="45dp"
-        android:layout_gravity="center"
-        android:background="@color/tab_gb"
-        android:gravity="center"
-        android:orientation="horizontal">
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:background="#FFF" />
 
-        <com.bottom.BottomBarItem
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            app:iconNormal="@mipmap/tab_home_normal"
-            app:iconSelected="@mipmap/tab_home_selected"
-            app:iconSize="25dp"
-            app:itemMarginTop="0dp"
-            app:itemText="首页"
-            app:itemTextSize="10sp"
-            app:openTouchBg="true"
-            app:textColorNormal="@color/tab_normal_color"
-            app:textColorSelected="@color/tab_selected_color"
-            app:touchDrawable="@drawable/selector_bg" />
-
-        <com.bottom.BottomBarItem
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            app:iconNormal="@mipmap/tab_video_normal"
-            app:iconSelected="@mipmap/tab_video_selected"
-            app:iconSize="25dp"
-            app:itemMarginTop="0dp"
-            app:itemText="视频"
-            app:itemTextSize="10sp"
-            app:openTouchBg="true"
-            app:textColorNormal="@color/tab_normal_color"
-            app:textColorSelected="@color/tab_selected_color"
-            app:touchDrawable="@drawable/selector_bg" />
-
-        <com.bottom.BottomBarItem
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            app:iconNormal="@mipmap/tab_micro_normal"
-            app:iconSelected="@mipmap/tab_micro_selected"
-            app:iconSize="25dp"
-            app:itemMarginTop="0dp"
-            app:itemText="微头条"
-            app:itemTextSize="10sp"
-            app:notifyMarginTop="5dp"
-            app:notifySize="8dp"
-            app:openTouchBg="true"
-            app:textColorNormal="@color/tab_normal_color"
-            app:textColorSelected="@color/tab_selected_color"
-            app:touchDrawable="@drawable/selector_bg" />
-
-        <com.bottom.BottomBarItem
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            app:iconNormal="@mipmap/tab_me_normal"
-            app:iconSelected="@mipmap/tab_me_selected"
-            app:iconSize="25dp"
-            app:itemMarginTop="0dp"
-            app:itemText="我的"
-            app:itemTextSize="10sp"
-            app:openTouchBg="true"
-            app:textColorNormal="@color/tab_normal_color"
-            app:textColorSelected="@color/tab_selected_color"
-            app:touchDrawable="@drawable/selector_bg" />
-
-    </com.bottom.BottomBarLayout>
-
-</LinearLayout>
+</RelativeLayout>
