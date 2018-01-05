@@ -73,6 +73,6 @@ xml文件
 打开app的module中的build.gradle，在dependencies{}中，添加依赖，如下：
 
     dependencies {
-	        compile 'com.github.wenchaosong:bottomBar:2.0.2'
+	        compile 'com.github.wenchaosong:bottomBar:3.0.3'
 	}
 
