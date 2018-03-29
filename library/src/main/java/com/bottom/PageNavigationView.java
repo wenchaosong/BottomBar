@@ -193,6 +193,12 @@ public class PageNavigationView extends ViewGroup {
             return CustomBuilder.this;
         }
 
+        /**
+         * 获取对应位置的 item
+         *
+         * @param position 索引
+         * @return {@link CustomBuilder}
+         */
         public BaseTabItem getItem(int position) {
             if (position >= items.size())
                 throw new IllegalArgumentException("position not exist");

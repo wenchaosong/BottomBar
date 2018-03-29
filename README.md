@@ -1,21 +1,24 @@
 ### 轻量级的底部导航栏
 
+在原项目[PagerBottomTabStrip](https://github.com/tyzlmjj/PagerBottomTabStrip) 基础上
+增加了 getItem 方法，能设置对应 position 的 tab 属性
+
 ### 实现效果图
 
-|![horizontal](/img/demo.png "horizontal")|![vertical](/img/demo8.png "vertical")|
+|![horizontal](/intro_img/demo.png "horizontal")|![vertical](/intro_img/demo8.png "vertical")|
 |---|---|
-|![Material 1](/img/demo1.gif "Material 1")|![Material 2](/img/demo2.gif "Material 2")|
-|![Material 3](/img/demo3.gif "Material 3")|![Material 4](/img/demo4.gif "Material 4")|
+|![Material 1](/intro_img/demo1.gif "Material 1")|![Material 2](/intro_img/demo2.gif "Material 2")|
+|![Material 3](/intro_img/demo3.gif "Material 3")|![Material 4](/intro_img/demo4.gif "Material 4")|
 
 ### 自定义扩展例子
 
 |Library中已经实现的一个最普通的效果|
 |---|
-|![PagerBottomTabStrip](/img/demo5.gif "PagerBottomTabStrip")|
+|![PagerBottomTabStrip](/intro_img/demo5.gif "PagerBottomTabStrip")|
 
 |Demo中的例子||
 |---|---|
-|![PagerBottomTabStrip](/img/demo7.png "PagerBottomTabStrip")|![PagerBottomTabStrip](/img/demo6.png "PagerBottomTabStrip")|
+|![PagerBottomTabStrip](/intro_img/demo7.png "PagerBottomTabStrip")|![PagerBottomTabStrip](/intro_img/demo6.png "PagerBottomTabStrip")|
 
 
 ### 使用
@@ -73,6 +76,6 @@ xml文件
 打开app的module中的build.gradle，在dependencies{}中，添加依赖，如下：
 
     dependencies {
-	        compile 'com.github.wenchaosong:bottomBar:3.0.3'
+	        compile 'com.github.wenchaosong:bottomBar:3.0.5'
 	}
 

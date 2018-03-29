@@ -12,7 +12,6 @@ import android.util.TypedValue;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.animation.AccelerateDecelerateInterpolator;
-import android.widget.FrameLayout;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -182,7 +181,7 @@ public class MaterialItemView extends BaseTabItem {
     public void setHideTitle(boolean hideTitle) {
         mHideTitle = hideTitle;
 
-        FrameLayout.LayoutParams iconParams = (FrameLayout.LayoutParams) mIcon.getLayoutParams();
+        LayoutParams iconParams = (LayoutParams) mIcon.getLayoutParams();
 
         if (mHideTitle) {
             iconParams.topMargin = mTopMarginHideTitle;

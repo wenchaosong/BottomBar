@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/activity_material_design"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal">
+
+    <com.bottom.PageNavigationView
+        android:id="@+id/tab"
+        android:layout_width="56dp"
+        android:layout_height="match_parent"
+        android:background="@drawable/tab_background"
+        android:elevation="8dp" />
+
+    <com.simple.other.NoTouchViewPager
+        android:id="@+id/viewPager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+</LinearLayout>

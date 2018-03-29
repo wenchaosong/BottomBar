@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_material_design"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SpecialActivity">
+
+    <com.simple.other.NoTouchViewPager
+        android:id="@+id/viewPager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="48dp" />
+
+    <com.bottom.PageNavigationView
+        android:id="@+id/tab"
+        android:layout_width="match_parent"
+        android:layout_height="68dp"
+        android:layout_gravity="bottom"
+        android:background="@android:color/transparent" />
+
+</FrameLayout>
