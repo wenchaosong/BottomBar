@@ -1,8 +1,8 @@
 package com.bottom;
 
-import android.support.v4.view.ViewPager;
-
 import com.bottom.listener.OnTabItemSelectedListener;
+
+import androidx.viewpager.widget.ViewPager;
 
 public class NavigationController implements ItemController, BottomLayoutController {
 

@@ -1,9 +1,6 @@
 package com.simple;
 
 import android.os.Bundle;
-import android.support.annotation.Nullable;
-import android.support.v4.view.ViewPager;
-import android.support.v7.app.AppCompatActivity;
 
 import com.bottom.NavigationController;
 import com.bottom.PageNavigationView;
@@ -11,6 +8,10 @@ import com.bottom.item.BaseTabItem;
 import com.simple.custom.SpecialTab;
 import com.simple.custom.SpecialTabRound;
 import com.simple.other.MyViewPagerAdapter;
+
+import androidx.annotation.Nullable;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.viewpager.widget.ViewPager;
 
 /**
  * Created by mjj on 2017/6/25

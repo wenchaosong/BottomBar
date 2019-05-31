@@ -3,9 +3,6 @@ package com.bottom.internal;
 import android.content.Context;
 import android.graphics.Typeface;
 import android.graphics.drawable.Drawable;
-import android.support.annotation.ColorInt;
-import android.support.v4.content.ContextCompat;
-import android.support.v4.view.ViewCompat;
 import android.util.AttributeSet;
 import android.util.TypedValue;
 import android.view.LayoutInflater;
@@ -16,6 +13,10 @@ import android.widget.TextView;
 import com.bottom.R;
 
 import java.util.Locale;
+
+import androidx.annotation.ColorInt;
+import androidx.core.content.ContextCompat;
+import androidx.core.view.ViewCompat;
 
 public class RoundMessageView extends FrameLayout {
     private final View mOval;

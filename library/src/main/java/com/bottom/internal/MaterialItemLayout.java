@@ -11,7 +11,6 @@ import android.graphics.Paint;
 import android.graphics.RectF;
 import android.graphics.drawable.RippleDrawable;
 import android.os.Build;
-import android.support.v4.view.ViewCompat;
 import android.util.AttributeSet;
 import android.view.MotionEvent;
 import android.view.View;
@@ -28,6 +27,8 @@ import com.bottom.listener.OnTabItemSelectedListener;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
+
+import androidx.core.view.ViewCompat;
 
 /**
  * 存放 Material Design 风格按钮的水平布局

@@ -76,6 +76,6 @@ xml文件
 打开app的module中的build.gradle，在dependencies{}中，添加依赖，如下：
 
     dependencies {
-	        implementation 'com.github.wenchaosong:BottomBar:3.0.7'
+	        implementation 'com.github.wenchaosong:BottomBar:3.0.8'
 	}
 

@@ -1,14 +1,15 @@
 package com.simple;
 
 import android.os.Bundle;
-import android.support.v4.view.ViewPager;
-import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 
 import com.bottom.NavigationController;
 import com.bottom.PageNavigationView;
 import com.bottom.listener.OnTabItemSelectedListener;
 import com.simple.other.MyViewPagerAdapter;
+
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.viewpager.widget.ViewPager;
 
 /**
  * Created by mjj on 2017/8/3

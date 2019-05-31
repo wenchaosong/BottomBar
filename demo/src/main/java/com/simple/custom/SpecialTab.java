@@ -1,9 +1,6 @@
 package com.simple.custom;
 
 import android.content.Context;
-import android.support.annotation.ColorInt;
-import android.support.annotation.DrawableRes;
-import android.support.annotation.Nullable;
 import android.util.AttributeSet;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -13,6 +10,10 @@ import android.widget.TextView;
 import com.bottom.internal.RoundMessageView;
 import com.bottom.item.BaseTabItem;
 import com.simple.R;
+
+import androidx.annotation.ColorInt;
+import androidx.annotation.DrawableRes;
+import androidx.annotation.Nullable;
 
 /**
  * Created by mjj on 2017/6/3

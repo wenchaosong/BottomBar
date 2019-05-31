@@ -1,8 +1,6 @@
 package com.bottom.item;
 
 import android.content.Context;
-import android.support.annotation.ColorInt;
-import android.support.annotation.DrawableRes;
 import android.util.AttributeSet;
 import android.view.LayoutInflater;
 import android.widget.ImageView;
@@ -10,6 +8,9 @@ import android.widget.TextView;
 
 import com.bottom.R;
 import com.bottom.internal.RoundMessageView;
+
+import androidx.annotation.ColorInt;
+import androidx.annotation.DrawableRes;
 
 public class NormalItemView extends BaseTabItem {
 

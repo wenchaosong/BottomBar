@@ -1,13 +1,14 @@
 package com.simple.custom;
 
 import android.content.Context;
-import android.support.annotation.DrawableRes;
 import android.util.AttributeSet;
 import android.view.LayoutInflater;
 import android.widget.ImageView;
 
 import com.bottom.item.BaseTabItem;
 import com.simple.R;
+
+import androidx.annotation.DrawableRes;
 
 /**
  * 自定义一个只有图标的Item
