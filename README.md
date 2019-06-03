@@ -27,7 +27,7 @@
 
 xml文件
     
-	<com.bottom.PageNavigationView
+	<com.ms.bottombar.PageNavigationView
             android:id="@+id/tab"
             android:layout_width="match_parent"
             android:layout_height="50dp"
@@ -66,5 +66,6 @@ xml文件
 
     dependencies {
 	        implementation 'com.ms:BottomBar:1.0.0'
+	        implementation 'com.ms:BottomBar-androidx:1.0.0'
 	}
 
