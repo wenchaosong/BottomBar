@@ -19,7 +19,7 @@
         android:maxLines="1"
         android:textSize="12sp" />
 
-    <com.bottom.internal.RoundMessageView
+    <com.ms.bottombar.internal.RoundMessageView
         android:id="@+id/messages"
         android:layout_width="20dp"
         android:layout_height="20dp"

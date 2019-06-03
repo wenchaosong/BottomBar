@@ -13,14 +13,14 @@
         android:background="@drawable/tab_background"
         android:elevation="8dp">
 
-        <com.bottom.PageNavigationView
+        <com.ms.bottombar.PageNavigationView
             android:id="@+id/tab"
             android:layout_width="match_parent"
             android:layout_height="wrap_content" />
 
     </ScrollView>
 
-    <com.simple.other.NoTouchViewPager
+    <com.test.other.NoTouchViewPager
         android:id="@+id/viewPager"
         android:layout_width="match_parent"
         android:layout_height="match_parent" />

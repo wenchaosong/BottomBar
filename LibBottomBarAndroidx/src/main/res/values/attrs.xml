@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="PageNavigationView">
+        <attr name="NavigationPaddingTop" format="dimension" />
+        <attr name="NavigationPaddingBottom" format="dimension" />
+    </declare-styleable>
+</resources>

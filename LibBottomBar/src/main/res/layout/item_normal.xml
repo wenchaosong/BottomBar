@@ -1,0 +1,41 @@
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <ImageView
+        android:id="@+id/icon"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="8dp" />
+
+    <com.ms.bottombar.internal.BaselineLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|center_horizontal"
+        android:clipToPadding="false"
+        android:paddingBottom="10dp">
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:maxLines="1"
+            android:textSize="12sp"
+            tools:text="123" />
+
+    </com.ms.bottombar.internal.BaselineLayout>
+
+    <com.ms.bottombar.internal.RoundMessageView
+        android:id="@+id/messages"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="3dp"
+        android:translationX="14dp" />
+
+</merge>
+
+
+
+
+

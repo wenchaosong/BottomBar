@@ -3,19 +3,19 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <com.simple.other.NoTouchViewPager
+    <com.test.other.NoTouchViewPager
         android:id="@+id/viewPager"
         android:layout_width="match_parent"
         android:layout_height="match_parent" />
 
-    <androidx.appcompat.widget.Toolbar
+    <android.support.v7.widget.Toolbar
         android:id="@+id/toolbar"
         android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize"
         android:background="@color/colorPrimary"
         android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar" />
 
-    <com.bottom.PageNavigationView
+    <com.ms.bottombar.PageNavigationView
         android:id="@+id/tab"
         android:layout_width="match_parent"
         android:layout_height="56dp"
