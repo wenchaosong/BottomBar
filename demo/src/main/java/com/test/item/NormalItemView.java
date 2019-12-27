@@ -8,7 +8,7 @@ import android.view.LayoutInflater;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.ms.bottombar.R;
+import com.test.R;
 import com.ms.bottombar.internal.RoundMessageView;
 import com.ms.bottombar.item.BaseTabItem;
 import com.ms.bottombar.view.RefreshView;
