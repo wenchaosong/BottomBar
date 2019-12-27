@@ -8,7 +8,7 @@ import android.support.v7.app.AppCompatActivity;
 import com.ms.bottombar.NavigationController;
 import com.ms.bottombar.PageNavigationView;
 import com.ms.bottombar.item.BaseTabItem;
-import com.ms.bottombar.item.NormalItemView;
+import com.test.item.NormalItemView;
 import com.test.other.MyViewPagerAdapter;
 
 public class CustomActivity extends AppCompatActivity {
@@ -21,9 +21,9 @@ public class CustomActivity extends AppCompatActivity {
         PageNavigationView tab = (PageNavigationView) findViewById(R.id.tab);
 
         NavigationController navigationController = tab.custom()
-                .addItem(newItem(R.drawable.ic_restore_gray_24dp, R.drawable.ic_restore_teal_24dp, "Recents"))
-                .addItem(newItem(R.drawable.ic_favorite_gray_24dp, R.drawable.ic_favorite_teal_24dp, "Favorites"))
-                .addItem(newItem(R.drawable.ic_nearby_gray_24dp, R.drawable.ic_nearby_teal_24dp, "Nearby"))
+                .addItem(newItem(R.drawable.ic_restore_gray_24dp, R.drawable.ic_restore_teal_24dp, "Recents", false))
+                .addItem(newItem(R.drawable.ic_favorite_gray_24dp, R.drawable.ic_favorite_teal_24dp, "Favorites", true))
+                .addItem(newItem(R.drawable.ic_nearby_gray_24dp, R.drawable.ic_nearby_teal_24dp, "Nearby", false))
                 .build();
 
         ViewPager viewPager = (ViewPager) findViewById(R.id.viewPager);
@@ -40,9 +40,9 @@ public class CustomActivity extends AppCompatActivity {
     }
 
     //创建一个Item
-    private BaseTabItem newItem(int drawable, int checkedDrawable, String text) {
+    private BaseTabItem newItem(int drawable, int checkedDrawable, String text, boolean showRefresh) {
         NormalItemView normalItemView = new NormalItemView(this);
-        normalItemView.initialize(drawable, checkedDrawable, text);
+        normalItemView.initialize(drawable, checkedDrawable, text, showRefresh);
         normalItemView.setTextDefaultColor(Color.GRAY);
         normalItemView.setTextCheckedColor(0xFF009688);
         return normalItemView;

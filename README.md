@@ -12,9 +12,9 @@
 
 ### 自定义扩展例子
 
-|Library中已经实现的一个最普通的效果|
-|---|
-|![PagerBottomTabStrip](/intro_img/demo5.gif "PagerBottomTabStrip")|
+|仿京东重复刷新动画|Library中已经实现的一个最普通的效果|
+|---|---|
+|![PagerBottomTabStrip](/intro_img/demo9.gif "PagerBottomTabStrip")|![PagerBottomTabStrip](/intro_img/demo5.gif "PagerBottomTabStrip")|
 
 |Demo中的例子||
 |---|---|

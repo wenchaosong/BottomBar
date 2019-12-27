@@ -1,4 +1,4 @@
-package com.ms.bottombar.item;
+package com.test.item;
 
 import android.content.Context;
 import android.support.annotation.ColorInt;
@@ -10,16 +10,19 @@ import android.widget.TextView;
 
 import com.ms.bottombar.R;
 import com.ms.bottombar.internal.RoundMessageView;
+import com.ms.bottombar.item.BaseTabItem;
+import com.ms.bottombar.view.RefreshView;
 
 public class NormalItemView extends BaseTabItem {
 
     private ImageView mIcon;
     private final TextView mTitle;
     private final RoundMessageView mMessages;
+    private RefreshView mRefreshView;
 
     private int mDefaultDrawable;
     private int mCheckedDrawable;
-
+    private boolean mShowRefresh;
     private int mDefaultTextColor = 0x56000000;
     private int mCheckedTextColor = 0x56000000;
 
@@ -36,9 +39,10 @@ public class NormalItemView extends BaseTabItem {
 
         LayoutInflater.from(context).inflate(R.layout.item_normal, this, true);
 
-        mIcon = (ImageView) findViewById(R.id.icon);
-        mTitle = (TextView) findViewById(R.id.title);
-        mMessages = (RoundMessageView) findViewById(R.id.messages);
+        mIcon = findViewById(R.id.icon);
+        mRefreshView = findViewById(R.id.refresh);
+        mTitle = findViewById(R.id.title);
+        mMessages = findViewById(R.id.messages);
     }
 
     /**
@@ -48,20 +52,38 @@ public class NormalItemView extends BaseTabItem {
      * @param checkedDrawableRes 选中状态的图标
      * @param title              标题
      */
-    public void initialize(@DrawableRes int drawableRes, @DrawableRes int checkedDrawableRes, String title) {
+    public void initialize(@DrawableRes int drawableRes, @DrawableRes int checkedDrawableRes, String title, boolean showRefresh) {
         mDefaultDrawable = drawableRes;
         mCheckedDrawable = checkedDrawableRes;
+        mShowRefresh = showRefresh;
         mTitle.setText(title);
     }
 
     @Override
     public void setChecked(boolean checked) {
         if (checked) {
-            mIcon.setImageResource(mCheckedDrawable);
+            if (mShowRefresh) {
+                mRefreshView.startAnim();
+                mRefreshView.setVisibility(VISIBLE);
+                mIcon.setVisibility(GONE);
+            } else {
+                mIcon.setImageResource(mCheckedDrawable);
+                mIcon.setVisibility(VISIBLE);
+            }
             mTitle.setTextColor(mCheckedTextColor);
         } else {
+            mRefreshView.setVisibility(GONE);
             mIcon.setImageResource(mDefaultDrawable);
+            mIcon.setVisibility(VISIBLE);
             mTitle.setTextColor(mDefaultTextColor);
+        }
+    }
+
+    @Override
+    public void onRepeat() {
+        if (mShowRefresh) {
+            if (mRefreshView != null)
+                mRefreshView.startAnim();
         }
     }
 
