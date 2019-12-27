@@ -1,4 +1,4 @@
-package com.bottom.item;
+package com.ms.bottombar.item;
 
 import android.content.Context;
 import android.util.AttributeSet;

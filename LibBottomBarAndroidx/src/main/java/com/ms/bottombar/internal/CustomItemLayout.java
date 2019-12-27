@@ -1,4 +1,4 @@
-package com.bottom.internal;
+package com.ms.bottombar.internal;
 
 import android.animation.LayoutTransition;
 import android.content.Context;
@@ -6,14 +6,14 @@ import android.util.AttributeSet;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.bottom.ItemController;
-import com.bottom.item.BaseTabItem;
-import com.bottom.listener.OnTabItemSelectedListener;
+import androidx.core.view.ViewCompat;
+
+import com.ms.bottombar.ItemController;
+import com.ms.bottombar.item.BaseTabItem;
+import com.ms.bottombar.listener.OnTabItemSelectedListener;
 
 import java.util.ArrayList;
 import java.util.List;
-
-import androidx.core.view.ViewCompat;
 
 /**
  * 存放自定义项的布局

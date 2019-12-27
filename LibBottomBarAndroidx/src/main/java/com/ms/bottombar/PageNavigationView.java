@@ -1,4 +1,4 @@
-package com.bottom;
+package com.ms.bottombar;
 
 import android.animation.ObjectAnimator;
 import android.content.Context;
@@ -12,23 +12,23 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.view.animation.AccelerateDecelerateInterpolator;
 
-import com.bottom.internal.CustomItemLayout;
-import com.bottom.internal.CustomItemVerticalLayout;
-import com.bottom.internal.MaterialItemLayout;
-import com.bottom.internal.MaterialItemVerticalLayout;
-import com.bottom.internal.Utils;
-import com.bottom.item.BaseTabItem;
-import com.bottom.item.MaterialItemView;
-import com.bottom.item.OnlyIconMaterialItemView;
-import com.bottom.listener.OnTabItemSelectedListener;
-
-import java.util.ArrayList;
-import java.util.List;
-
 import androidx.annotation.ColorInt;
 import androidx.annotation.DrawableRes;
 import androidx.core.content.ContextCompat;
 import androidx.viewpager.widget.ViewPager;
+
+import com.ms.bottombar.internal.CustomItemLayout;
+import com.ms.bottombar.internal.CustomItemVerticalLayout;
+import com.ms.bottombar.internal.MaterialItemLayout;
+import com.ms.bottombar.internal.MaterialItemVerticalLayout;
+import com.ms.bottombar.internal.Utils;
+import com.ms.bottombar.item.BaseTabItem;
+import com.ms.bottombar.item.MaterialItemView;
+import com.ms.bottombar.item.OnlyIconMaterialItemView;
+import com.ms.bottombar.listener.OnTabItemSelectedListener;
+
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * 导航视图

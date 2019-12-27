@@ -1,39 +1,42 @@
-package com.bottom.internal;
+package com.ms.bottombar.internal;
 
-import android.animation.LayoutTransition;
 import android.content.Context;
 import android.util.AttributeSet;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.bottom.ItemController;
-import com.bottom.item.BaseTabItem;
-import com.bottom.listener.OnTabItemSelectedListener;
+import com.ms.bottombar.ItemController;
+import com.ms.bottombar.R;
+import com.ms.bottombar.item.BaseTabItem;
+import com.ms.bottombar.listener.OnTabItemSelectedListener;
 
 import java.util.ArrayList;
 import java.util.List;
 
 /**
- * Created by mjj on 2017/9/27
+ * 存放 Material Design 风格按钮的垂直布局
  */
-public class CustomItemVerticalLayout extends ViewGroup implements ItemController {
+public class MaterialItemVerticalLayout extends ViewGroup implements ItemController {
+
+    private final int NAVIGATION_ITEM_SIZE;
 
     private List<BaseTabItem> mItems;
     private List<OnTabItemSelectedListener> mListeners = new ArrayList<>();
 
     private int mSelected = -1;
 
-    public CustomItemVerticalLayout(Context context) {
+    public MaterialItemVerticalLayout(Context context) {
         this(context, null);
     }
 
-    public CustomItemVerticalLayout(Context context, AttributeSet attrs) {
+    public MaterialItemVerticalLayout(Context context, AttributeSet attrs) {
         this(context, attrs, 0);
     }
 
-    public CustomItemVerticalLayout(Context context, AttributeSet attrs, int defStyleAttr) {
+    public MaterialItemVerticalLayout(Context context, AttributeSet attrs, int defStyleAttr) {
         super(context, attrs, defStyleAttr);
-        setLayoutTransition(new LayoutTransition());
+
+        NAVIGATION_ITEM_SIZE = getResources().getDimensionPixelSize(R.dimen.material_bottom_navigation_height);
     }
 
     public void initialize(List<BaseTabItem> items) {
@@ -62,33 +65,25 @@ public class CustomItemVerticalLayout extends ViewGroup implements ItemControlle
 
     @Override
     protected void onMeasure(int widthMeasureSpec, int heightMeasureSpec) {
-        final int parentHeightMeasureSpec = MeasureSpec.makeMeasureSpec(MeasureSpec.getSize(heightMeasureSpec), MeasureSpec.UNSPECIFIED);
-        final int childwidthMeasureSpec = MeasureSpec.makeMeasureSpec(MeasureSpec.getSize(widthMeasureSpec), MeasureSpec.EXACTLY);
 
-        int totalHeight = getPaddingTop() + getPaddingBottom();
         final int n = getChildCount();
-        for (int i = 0; i < n; i++) {
 
+        final int heightSpec = MeasureSpec.makeMeasureSpec(NAVIGATION_ITEM_SIZE, MeasureSpec.EXACTLY);
+        final int widthSpec = MeasureSpec.makeMeasureSpec(NAVIGATION_ITEM_SIZE, MeasureSpec.EXACTLY);
+
+        for (int i = 0; i < n; i++) {
             final View child = getChildAt(i);
             if (child.getVisibility() == GONE) {
                 continue;
             }
-
-            final LayoutParams lp = child.getLayoutParams();
-            final int childHeightMeasureSpec = getChildMeasureSpec(parentHeightMeasureSpec,
-                    getPaddingTop() + getPaddingBottom(), lp.height);
-
-            child.measure(childwidthMeasureSpec, childHeightMeasureSpec);
-
-            totalHeight += child.getMeasuredHeight();
+            child.measure(widthSpec, heightSpec);
         }
 
-        setMeasuredDimension(MeasureSpec.getSize(widthMeasureSpec), totalHeight);
+        super.onMeasure(widthMeasureSpec, heightMeasureSpec);
     }
 
     @Override
     protected void onLayout(boolean changed, int left, int top, int right, int bottom) {
-
         final int count = getChildCount();
         //只支持top的padding
         int used = getPaddingTop();

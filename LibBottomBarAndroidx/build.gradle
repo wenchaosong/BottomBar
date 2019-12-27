@@ -24,7 +24,7 @@ publish {
     userOrg = 'songwenchao0714'
     groupId = 'com.ms'
     artifactId = 'BottomBar-androidx'
-    publishVersion = '1.0.0'
+    publishVersion = '1.0.1'
     desc = 'A simple bottom group lib'
     website = 'https://github.com/wenchaosong/BottomBar'
 }

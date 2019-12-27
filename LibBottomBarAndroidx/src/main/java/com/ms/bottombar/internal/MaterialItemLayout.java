@@ -1,4 +1,4 @@
-package com.bottom.internal;
+package com.ms.bottombar.internal;
 
 import android.animation.Animator;
 import android.animation.AnimatorListenerAdapter;
@@ -18,17 +18,17 @@ import android.view.ViewGroup;
 import android.view.animation.AccelerateDecelerateInterpolator;
 import android.view.animation.Interpolator;
 
-import com.bottom.ItemController;
-import com.bottom.MaterialMode;
-import com.bottom.R;
-import com.bottom.item.MaterialItemView;
-import com.bottom.listener.OnTabItemSelectedListener;
+import androidx.core.view.ViewCompat;
+
+import com.ms.bottombar.ItemController;
+import com.ms.bottombar.MaterialMode;
+import com.ms.bottombar.R;
+import com.ms.bottombar.item.MaterialItemView;
+import com.ms.bottombar.listener.OnTabItemSelectedListener;
 
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
-
-import androidx.core.view.ViewCompat;
 
 /**
  * 存放 Material Design 风格按钮的水平布局

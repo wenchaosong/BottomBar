@@ -1,4 +1,4 @@
-package com.bottom.item;
+package com.ms.bottombar.item;
 
 import android.animation.ValueAnimator;
 import android.content.Context;
@@ -11,14 +11,14 @@ import android.view.animation.AccelerateDecelerateInterpolator;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.bottom.R;
-import com.bottom.internal.RoundMessageView;
-import com.bottom.internal.Utils;
-
 import androidx.annotation.AttrRes;
 import androidx.annotation.ColorInt;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+
+import com.ms.bottombar.R;
+import com.ms.bottombar.internal.RoundMessageView;
+import com.ms.bottombar.internal.Utils;
 
 /**
  * 材料设计风格项

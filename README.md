@@ -65,7 +65,7 @@ xml文件
 #### **导入方式**
 
     dependencies {
-	        implementation 'com.ms:BottomBar:1.0.0'
-	        implementation 'com.ms:BottomBar-androidx:1.0.0'
+	        implementation 'com.ms:BottomBar:1.0.1'
+	        implementation 'com.ms:BottomBar-androidx:1.0.1'
 	}
 

@@ -1,6 +1,6 @@
-package com.bottom;
+package com.ms.bottombar;
 
-import com.bottom.listener.OnTabItemSelectedListener;
+import com.ms.bottombar.listener.OnTabItemSelectedListener;
 
 public interface ItemController {
     /**

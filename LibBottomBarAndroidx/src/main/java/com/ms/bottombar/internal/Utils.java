@@ -1,4 +1,4 @@
-package com.bottom.internal;
+package com.ms.bottombar.internal;
 
 import android.content.Context;
 import android.content.res.Resources;

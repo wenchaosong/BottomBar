@@ -1,4 +1,4 @@
-package com.bottom.item;
+package com.ms.bottombar.item;
 
 import android.content.Context;
 import android.content.res.ColorStateList;
@@ -10,14 +10,14 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.ImageView;
 
-import com.bottom.R;
-import com.bottom.internal.RoundMessageView;
-import com.bottom.internal.Utils;
-
 import androidx.annotation.AttrRes;
 import androidx.annotation.ColorInt;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+
+import com.ms.bottombar.R;
+import com.ms.bottombar.internal.RoundMessageView;
+import com.ms.bottombar.internal.Utils;
 
 /**
  * 只有图标的材料设计项(用于垂直布局)

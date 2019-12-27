@@ -4,4 +4,16 @@
         <attr name="NavigationPaddingTop" format="dimension" />
         <attr name="NavigationPaddingBottom" format="dimension" />
     </declare-styleable>
+
+    <!-- 刷新控件 -->
+    <declare-styleable name="RefreshView">
+        <attr name="rv_width" format="dimension" />
+        <attr name="rv_height" format="dimension" />
+        <attr name="rv_circle_color" format="color" />
+        <attr name="rv_circle_radius" format="dimension" />
+        <attr name="rv_arc_color" format="color" />
+        <attr name="rv_arc_stroke" format="dimension" />
+        <attr name="rv_start_angle" format="dimension" />
+        <attr name="rv_no_paint_angle" format="dimension" />
+    </declare-styleable>
 </resources>

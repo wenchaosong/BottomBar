@@ -1,4 +1,4 @@
-package com.bottom;
+package com.ms.bottombar;
 
 import androidx.viewpager.widget.ViewPager;
 

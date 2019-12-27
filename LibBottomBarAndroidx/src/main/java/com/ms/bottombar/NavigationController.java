@@ -1,8 +1,8 @@
-package com.bottom;
-
-import com.bottom.listener.OnTabItemSelectedListener;
+package com.ms.bottombar;
 
 import androidx.viewpager.widget.ViewPager;
+
+import com.ms.bottombar.listener.OnTabItemSelectedListener;
 
 public class NavigationController implements ItemController, BottomLayoutController {
 

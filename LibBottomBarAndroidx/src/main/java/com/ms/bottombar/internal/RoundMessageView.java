@@ -1,4 +1,4 @@
-package com.bottom.internal;
+package com.ms.bottombar.internal;
 
 import android.content.Context;
 import android.graphics.Typeface;
@@ -10,13 +10,13 @@ import android.view.View;
 import android.widget.FrameLayout;
 import android.widget.TextView;
 
-import com.bottom.R;
-
-import java.util.Locale;
-
 import androidx.annotation.ColorInt;
 import androidx.core.content.ContextCompat;
 import androidx.core.view.ViewCompat;
+
+import com.ms.bottombar.R;
+
+import java.util.Locale;
 
 public class RoundMessageView extends FrameLayout {
     private final View mOval;

@@ -9,7 +9,7 @@
         android:layout_marginBottom="8dp"
         android:layout_marginTop="8dp" />
 
-    <com.bottom.internal.BaselineLayout
+    <com.ms.bottombar.internal.BaselineLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="bottom|center_horizontal"
@@ -23,9 +23,9 @@
             android:maxLines="1"
             android:textSize="12sp"
             tools:text="123" />
-    </com.bottom.internal.BaselineLayout>
+    </com.ms.bottombar.internal.BaselineLayout>
 
-    <com.bottom.internal.RoundMessageView
+    <com.ms.bottombar.internal.RoundMessageView
         android:id="@+id/messages"
         android:layout_width="20dp"
         android:layout_height="20dp"

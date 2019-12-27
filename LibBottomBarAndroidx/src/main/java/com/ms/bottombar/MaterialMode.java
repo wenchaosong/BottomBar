@@ -1,4 +1,4 @@
-package com.bottom;
+package com.ms.bottombar;
 
 /**
  * <p>模式选择。</p>

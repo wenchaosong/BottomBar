@@ -1,4 +1,4 @@
-package com.bottom.listener;
+package com.ms.bottombar.listener;
 
 /**
  * 导航栏按钮选中事件监听

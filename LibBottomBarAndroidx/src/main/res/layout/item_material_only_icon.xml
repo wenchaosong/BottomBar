@@ -6,7 +6,7 @@
         android:layout_height="24dp"
         android:layout_gravity="center" />
 
-    <com.bottom.internal.RoundMessageView
+    <com.ms.bottombar.internal.RoundMessageView
         android:id="@+id/messages"
         android:layout_width="20dp"
         android:layout_height="20dp"
