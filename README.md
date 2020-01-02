@@ -12,7 +12,7 @@
 
 ### 自定义扩展例子
 
-|仿京东重复刷新动画|Library中已经实现的一个最普通的效果|
+|仿京东重复刷新动画|普通效果|
 |---|---|
 |![PagerBottomTabStrip](/intro_img/demo9.gif "PagerBottomTabStrip")|![PagerBottomTabStrip](/intro_img/demo5.gif "PagerBottomTabStrip")|
 
@@ -65,7 +65,7 @@ xml文件
 #### **导入方式**
 
     dependencies {
-	        implementation 'com.ms:BottomBar:1.0.1'
-	        implementation 'com.ms:BottomBar-androidx:1.0.1'
+	        implementation 'com.ms:BottomBar:1.0.2'
+	        implementation 'com.ms:BottomBar-androidx:1.0.2'
 	}
 

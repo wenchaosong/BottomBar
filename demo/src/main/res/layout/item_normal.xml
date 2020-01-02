@@ -1,5 +1,4 @@
 <merge xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools">
 
     <ImageView
@@ -11,13 +10,11 @@
 
     <com.ms.bottombar.view.RefreshView
         android:id="@+id/refresh"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
         android:layout_gravity="center_horizontal"
         android:layout_marginTop="8dp"
-        android:visibility="gone"
-        app:rv_height="24dp"
-        app:rv_width="24dp" />
+        android:visibility="gone" />
 
     <com.ms.bottombar.internal.BaselineLayout
         android:layout_width="wrap_content"

@@ -24,7 +24,7 @@ publish {
     userOrg = 'songwenchao0714'
     groupId = 'com.ms'
     artifactId = 'BottomBar'
-    publishVersion = '1.0.1'
+    publishVersion = '1.0.2'
     desc = 'A simple bottom group lib'
     website = 'https://github.com/wenchaosong/BottomBar'
 }
