@@ -23,8 +23,8 @@ apply plugin: 'com.novoda.bintray-release'
 publish {
     userOrg = 'songwenchao0714'
     groupId = 'com.ms'
-    artifactId = 'BottomBar'
-    publishVersion = '1.0.2'
+    artifactId = 'bottombar'
+    publishVersion = '1.0.0'
     desc = 'A simple bottom group lib'
     website = 'https://github.com/wenchaosong/BottomBar'
 }

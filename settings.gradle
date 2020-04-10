@@ -1,1 +1,1 @@
-include ':demo', ':LibBottomBar'/*, ':LibBottomBarAndroidx'*/
+include ':demo', ':LibBottomBar', ':LibBottomBarAndroidx'
