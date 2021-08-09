@@ -22,11 +22,9 @@ android {
 
 dependencies {
     implementation fileTree(include: ['*.jar'], dir: 'libs')
+    implementation "androidx.appcompat:appcompat:$rootProject.ext.appcompat"
+    implementation 'com.google.android.material:material:1.0.0'
+
     implementation project(':LibBottomBar')
-    implementation "com.android.support:appcompat-v7:$rootProject.ext.supportVersion"
-    implementation "com.android.support:design:$rootProject.ext.supportVersion"
-    /*implementation project(':LibBottomBarAndroidx')
-    implementation 'androidx.appcompat:appcompat:1.1.0'
-    implementation 'com.google.android.material:material:1.0.0'*/
 
 }

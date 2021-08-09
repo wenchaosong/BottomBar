@@ -2,29 +2,15 @@ apply plugin: 'com.android.library'
 
 android {
     compileSdkVersion rootProject.ext.compileSdkVersion
+    buildToolsVersion rootProject.ext.buildToolsVersion
 
     defaultConfig {
         minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdkVersion
     }
-
-    lintOptions {
-        abortOnError false
-    }
 }
 
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
-    implementation "com.android.support:appcompat-v7:$rootProject.ext.supportVersion"
-}
-
-apply plugin: 'com.novoda.bintray-release'
-
-publish {
-    userOrg = 'songwenchao0714'
-    groupId = 'com.ms'
-    artifactId = 'bottombar'
-    publishVersion = '1.0.0'
-    desc = 'A simple bottom group lib'
-    website = 'https://github.com/wenchaosong/BottomBar'
+    implementation "androidx.appcompat:appcompat:$rootProject.ext.appcompat"
 }

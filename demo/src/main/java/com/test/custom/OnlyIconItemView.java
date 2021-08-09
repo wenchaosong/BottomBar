@@ -1,10 +1,11 @@
 package com.test.custom;
 
 import android.content.Context;
-import android.support.annotation.DrawableRes;
 import android.util.AttributeSet;
 import android.view.LayoutInflater;
 import android.widget.ImageView;
+
+import androidx.annotation.DrawableRes;
 
 import com.ms.bottombar.item.BaseTabItem;
 import com.test.R;

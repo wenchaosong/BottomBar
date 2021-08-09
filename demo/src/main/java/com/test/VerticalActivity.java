@@ -1,9 +1,10 @@
 package com.test;
 
 import android.os.Bundle;
-import android.support.v4.view.ViewPager;
-import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
+
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.viewpager.widget.ViewPager;
 
 import com.ms.bottombar.NavigationController;
 import com.ms.bottombar.PageNavigationView;

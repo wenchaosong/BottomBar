@@ -66,6 +66,6 @@ xml文件
 
     dependencies {
 	        implementation 'com.ms:bottombar:1.0.0'
-	        implementation 'com.ms:bottombar-androidx:1.0.0'
+            implementation 'com.github.wenchaosong:BottomBar:3.0.9'
 	}
 

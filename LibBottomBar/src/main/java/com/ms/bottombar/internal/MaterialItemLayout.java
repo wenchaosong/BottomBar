@@ -11,13 +11,14 @@ import android.graphics.Paint;
 import android.graphics.RectF;
 import android.graphics.drawable.RippleDrawable;
 import android.os.Build;
-import android.support.v4.view.ViewCompat;
 import android.util.AttributeSet;
 import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.animation.AccelerateDecelerateInterpolator;
 import android.view.animation.Interpolator;
+
+import androidx.core.view.ViewCompat;
 
 import com.ms.bottombar.ItemController;
 import com.ms.bottombar.MaterialMode;

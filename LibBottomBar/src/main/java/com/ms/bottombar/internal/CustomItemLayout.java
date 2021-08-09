@@ -2,11 +2,12 @@ package com.ms.bottombar.internal;
 
 import android.animation.LayoutTransition;
 import android.content.Context;
-import android.support.v4.view.ViewCompat;
 import android.util.AttributeSet;
 import android.view.View;
 import android.view.ViewGroup;
 
+
+import androidx.core.view.ViewCompat;
 
 import com.ms.bottombar.ItemController;
 import com.ms.bottombar.item.BaseTabItem;
